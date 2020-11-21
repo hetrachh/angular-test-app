@@ -7,6 +7,8 @@ import { HeaderComponent } from './Component/header/header.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { LoginComponent } from './Component/login/login.component';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MyResponse } from 'src/app/library/MyResponse';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,12 @@ import { DashboardComponent } from './Component/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    MyResponse
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

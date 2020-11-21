@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MyResponse} from 'src/app/library/MyResponse'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private myResponse: MyResponse) { }
+  name : string
   ngOnInit(): void {
+    
   }
 
 }
